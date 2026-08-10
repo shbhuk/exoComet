@@ -1,8 +1,8 @@
 # exoComet_Delivery: A 1D Markov-Chain Model of Cometary Orbital Evolution
 
 This repository contains the code used to compute the analytic
-Markov-chain estimates of cometary dynamical outcomes described in
-FINDME.
+Markov-chain estimates of cometary dynamical outcomes described in the paper `Comet Delivery in Compact Planetary Systems Is Stellar-Mass Independent` by Shubham Kanodia & John Chambers, which is currently under prep.
+
 
 Given a star with a chain of planets, the model follows a population
 of comets that start their dynamical lives just beyond the outermost
