@@ -34,7 +34,7 @@ pip install numpy scipy astropy
 ### Command line
 
 ```bash
-python markov.py markov.in
+python markov.py ../examples/markov.in -o ../examples
 ```
 
 This reads `markov.in`, runs the model, prints a summary to the
@@ -108,7 +108,7 @@ result = markov.run(**params)
 
 ## Input file format (`markov.in`)
 
-One value per line, in order, with everything after the first token
+We include a sample input file in the `examples` directory. One value per line, in order, with everything after the first token
 (e.g. `!` comments) ignored:
 
 ```

@@ -1,0 +1,12 @@
+    0.11d0   ! stellar mass (solar masses)
+      0.052d0  1 distance of innermost planet (AU)
+      0.052d0  ! distance of target planet (AU)
+         3d0  ! small-planet / giant-planet transition (AU)
+     1.04d0  ! distance of outermost planet (AU)
+   1d0 ! mass of target planet (Earth masses)
+   1d0 ! mass of each small planet (Earth masses)
+   1d0 ! mass of innermost giant planet (Earth masses)
+   1d0 ! mass of outermost giant planet (Earth masses)
+          3d0  ! planetary density (g/cm^3)
+          0    ! target: 0=planet, 1=absorbing boundary
+          1    ! system: 1=small planets only, 2=giant planets only, 3=both

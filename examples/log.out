@@ -1,0 +1,34 @@
+
+ Stellar mass (solar):                0.110
+ Innermost planet distance (AU):     5.2000e-02
+ Distance of target (AU):            5.2000e-02
+ Inner edge of target control (AU):  5.2000e-02
+ Outer edge of target control (AU):  5.7428e-02
+ Small/giant planet transition(AU):  1.0400e+00
+ Outermost giant-plan dist (AU):     1.0400e+00
+
+ Target planet mass (Earth):         1.0000e+00
+ Small-planet mass (Earth):          1.0000e+00
+ Innermost giant-plan mass (Earth):  1.0000e+00
+ Outermost giant-plan mass (Earth):  1.0000e+00
+ Planetary density (g/cm^3):         3.0000e+00
+ Target: ordinary planet   
+ System: small planets only        
+
+ Number of radial zones:            14633
+ Starting zone for comets:          10971
+ Small/giant plan transition zone:  10972
+ Inner edge of target control:          1
+ Outer edge of target control:        364
+
+ Comets that hit the target:         2.428e-04
+ Hit another small planet:           5.530e-01
+ Hit another giant plannet:          0.000e+00
+ Ejected by the target:              0.000e+00
+ Otherwise ejected when a < a_out:   0.000e+00
+ Otherwise ejected when a > a_out:   4.378e-01
+ Reached outer edge of the grid:     8.977e-03
+ Total probability:                  1.000e+00
+
+ Mean comet lifetime (year):  4.700e+07
+
