@@ -2,7 +2,7 @@
 
 This repository contains the code used to compute the analytic
 Markov-chain estimates of cometary dynamical outcomes described in
-[PAPER CITATION — add link/DOI on publication].
+FINDME.
 
 Given a star with a chain of planets, the model follows a population
 of comets that start their dynamical lives just beyond the outermost
@@ -14,49 +14,6 @@ absorption probabilities is obtained by solving a linear system for a
 tridiagonal Markov-chain transition matrix, rather than by direct
 N-body integration or Monte Carlo sampling.
 
-The code reports:
-
-- the fraction of comets that collide with a **target planet**,
-- the fraction that collide with some **other planet** (split into
-  "small" and "giant" planet populations),
-- the fraction that are **dynamically ejected** from the system
-  (split by whether the ejection occurred inside or outside the
-  outermost planet's orbit), and
-- the fraction that survive to the **outer edge of the grid**
-  (effectively unbound / still in the Kuiper-belt-like reservoir),
-
-as well as the **mean cometary lifetime**.
-
-## Background
-
-Planets are grouped into three zones as a function of semi-major axis
-`a`:
-
-- an inner region of "small" planets of fixed mass,
-- a **target** planet (the object of interest — e.g., a specific
-  exoplanet or Earth) that controls comet dynamics within `N_RH` Hill
-  radii of its orbit, and
-- an outer region of "giant" planets whose mass follows a power law
-  in `a`, transitioning smoothly from the small-planet mass at
-  `a_tran` to a specified mass at the outermost planet's distance
-  `a_out`.
-
-The model builds a logarithmically spaced grid in a coordinate `y`
-(monotonic in `a`) such that each grid spacing corresponds to a fixed
-number of local Hill radii, and assembles per-state collision and
-ejection probabilities from Öpik/Hill-sphere-style cross sections.
-Comet transport between adjacent states is then a nearest-neighbor
-Markov chain, and the various absorption probabilities are the
-solution of a tridiagonal linear system (`(I - T) u = r`), solved
-here with `scipy.linalg.solve_banded`.
-
-## Repository contents
-
-```
-markov.py     Model implementation (library + CLI)
-markov.in     Example input file
-README.md     This file
-```
 
 ## Requirements
 
@@ -65,6 +22,8 @@ README.md     This file
 - `scipy`
 - `astropy` (used for physical constants: `G`, `GM_sun`, `M_earth`,
   `au`, and the Julian year)
+
+The code has been tested with numpy==1.21.0, scipy==1.13.1, astropy==6.0.1
 
 ```bash
 pip install numpy scipy astropy
@@ -169,20 +128,15 @@ opt_system   1 = small planets only, 2 = giant planets only, 3 = both
 
 ## Validation
 
-This Python implementation was checked against the original Fortran
-(`markov.f90`) reference implementation: for the same input, the two
-codes agree to numerical precision (grid values and outcome
-probabilities match to ~1e-4 relative accuracy or better, the
-residual difference being attributable to the updated physical
-constants pulled from `astropy.constants` rather than the hard-coded
-values in the original code).
+This python implementation is converted from the original Fortran
+(`markov.f90`) reference implementation written by John Chambers and also included with this repository. For the same input, the two
+codes agree to numerical precision.
 
 ## Citation
 
-If you use this code, please cite the accompanying paper (see
-[`CITATION.cff`](CITATION.cff)):
+If you use this code, please cite the accompanying paper 
 
-> [Author list], "[Paper title]," [Journal], [Year]. [DOI]
+FINDME
 
 ## License
 
